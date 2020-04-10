@@ -1,36 +1,30 @@
-<style>
-h1{
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  text-alignment: center;
-  color: white;
 
-}
+h1{
+  color: white;
+  text-align: center;
+  }
 
 h1:hover{
   background-image: linear-gradient(to left, white, yellow,orange, red);
   -webkit-background-clip: text;
-  color: transparent
+  text-align: center;
+  color: transparent;
 
 }
 input[type=text] {
-  width: 100%;
+  width: 30%;
   background-color: white;
-  color: #AFAFAF;
   padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #AFAFAF ;
+  margin: 10px 60px;
   border-radius: 4px;
-  cursor: pointer;
 }
 input[type=email] {
-  width: 100%;
+  width: 30%;
   background-color: white;
-  color: #AFAFAF;
   padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #AFAFAF ;
+  margin: 10px 60px;
   border-radius: 4px;
-  cursor: pointer;
+  
 }
 input[type=temperature] {
   width: 100%;
@@ -43,36 +37,52 @@ input[type=temperature] {
   cursor: pointer;
 }
 input[type=checkbox] {
-  width: 100%;
+  width: 30%;
   background-color: white;
-  color: #AFAFAF;
   padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #AFAFAF ;
+  margin: 10px 60px;
   border-radius: 4px;
-  cursor: pointer;
 }
+
 input[type=phone] {
-  width: 100%;
+  width: 30%;
   background-color: white;
-  color: #AFAFAF;
   padding: 14px 20px;
-  margin: 8px 0;
-  border: 1px solid #AFAFAF ;
+  margin: 10px 60px;
   border-radius: 4px;
-  cursor: pointer;
 }
+
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
 }
+
 head{
   background-color: rgb(4, 5, 100)
 }
 
-body{
-  background-color: rgb(4, 5, 100);
-  
+.button{
+  background-color: white;
+  color: rgb(4, 5, 100);
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 8px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: rgb(4, 5, 100);
 }
-</style>
+
+.button:hover{
+  background-color: rgb(4, 5, 100);
+  color: white;
+}
+
+.choose{
+  float:left;
+  margin-left:60px;
+  margin-top:10px;
+}
