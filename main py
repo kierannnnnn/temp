@@ -12,7 +12,7 @@ def index():
     name = request.form.get('name')
     email = request.form.get('email')
     temperature = request.form.get('temperature')
-    overseas = request.form.get('overseas')
+    option = request.form.get('option')
     phone = request.form.get('phone')
     
     if int(temperature) > 38.0:
@@ -20,11 +20,11 @@ def index():
     else:
       message = "Just another day."
     fout = open("INFO.txt", 'a')
-    fout.write(name + ',' + email + ',' + temperature + ',' + overseas + ',' + phone + '\n')
+    fout.write(name + ',' + email + ',' + str(temperature) + ',' + option + ',' + phone + '\n')
     fout.close()
     fin = open("INFO.txt", 'r')
     lines = fin.readlines()
     fin.close()
-    return render_template("index.html", message=message, name=name, email=email, temperature=temperature, overseas=overseas, phone =phone, lines=lines )
+    return render_template("index.html", message=message, name=name, email=email, temperature=temperature, option=option, phone =phone, lines=lines )
 
 app.run(host='0.0.0.0', port=8080)
