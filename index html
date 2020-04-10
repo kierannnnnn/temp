@@ -2,41 +2,45 @@
 
 <html>
 
-<head>
+ <head>
+        <meta charset = "utf-8"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>virus check</title>
-  <h1>VIRUS CHECK</h1>
+        <h1>VIRUS CHECK</h1>
 	<link rel="stylesheet" href="/static/style.css" />
-</head>
+ </head>
 
-<body>
+ <body>
 	<form action="/" method="POST">
-		<b style = 'color:white'>Name: <input type="text" placeholder="enter name" name="name" /><br /></b>
-		<b style = 'color:white'>Email: <input type="email" placeholder="DHS email" name="email" /><br /></b>
-    <b style = 'color:white'>Temperature: <input type="temperature" name="temperature" placeholder="temperature" /><br /></b>
-    <b style = 'color:white'>have you travelled overseas in the past 14 days:
-      <input type="checkbox" name="overseas" value="yes">yes 
-      <input type="checkbox" name="overseas" value="no">no<br /> </b>
-    <b style = 'color:white'>Phone : <input type="phone" placeholder="phone number" name="phone" /><br /></b>
-
-			<input type="submit" value="submit" />       
-      
-		</form>
-  <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen">
-         <img alt="WHO" src="https://www.suss.edu.sg/images/default-source/content/comm/symptoms.jpg?sfvrsn=7cb1b44c_0"
-         class="center">
+	        <h1>VIRUS CHECK</h1>
+		<b style = 'color:white'>Name: <br/><input type="text" placeholder="enter name" name="name" /><br /></b><br/>
+		<b style = 'color:white'>Email: <br/><input type="email" placeholder="DHS email" name="email" /><br /></b><br/>
+                <b style = 'color:white'>Temperature: <br/><input type="temperature" name="temperature" placeholder="temperature" /><br /></b>
+                <b style = 'color:white'>have you travelled overseas in the past 14 days:<br/><br/></b>
+                <div class="choose">
+                   <input type ="radio" id="option1" name="option" value="Yes">
+                   <label for "option"><b style="color:white">Yes</b></label> 
+                   <input type="radio" name="option" id="option1" value="no"/>
+                   <label for "option"><b style="color:white"> No</b></label>
+                </div>
+                <b style = 'color:white'>Phone : <br/><input type="phone" placeholder="phone number" name="phone" /><br /></b>
+                <button class="button">Next</button><br/><br/>     
+        </form>
+        <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/events-as-they-happen">
+        <img alt="WHO" src="/static/symptoms.jpg" class="center">
          
          
 
-    <hr />
-    {{ message }}
-    {{ name }}<br />
-    {{ email }}<br />
-    {{ temperature }}<br />    
-    {{ overseas }}<br />
-    {{ phone }}<br />
+        <hr />
+	{{ message }}
+	{{ name }}<br />
+	{{ email }}<br />
+	{{ temperature }}<br />    
+	{{ overseas }}<br />
+	{{ phone }}<br />
 
-    {% for line in lines %}
-    <p>{{ line }}</p>
-    {% endfor %}
-	</body>
+	{% for line in lines %}
+	<p>{{ line }}</p>
+	{% endfor %}
+ </body>
 </html>
